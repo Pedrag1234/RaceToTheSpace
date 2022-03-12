@@ -25,22 +25,11 @@ public class PlayerMovement : MonoBehaviour
 
         if (Input.GetButtonDown("Jump"))
         {
-            
-            if (controller.isGrounded())
+          
+            if (m_NJumps > 0)
             {
-                
-                m_NJumps = 2;
                 m_Jump = true;
                 m_NJumps--;
-            }
-            else
-            {
-                if(m_NJumps > 0)
-                {
-                   
-                    m_Jump = true;
-                    m_NJumps--;
-                }
             }
         }
 
@@ -48,7 +37,13 @@ public class PlayerMovement : MonoBehaviour
 
     private void FixedUpdate()
     {
+        if (controller.isGrounded())
+        {
+            m_NJumps = 2;
+        }
+
         controller.MoveCharacter(currentMove * Time.deltaTime, m_Jump);
+
         m_Jump = false ;
     }
 }
