@@ -10,9 +10,6 @@ public class PlayerController : MonoBehaviour
     private float m_MoveSmooth = 0.3f;
 
     [SerializeField]
-    private float gravity = -9.8f;
-
-    [SerializeField]
     private LayerMask m_CollisionLayer;
 
     [SerializeField]
@@ -23,13 +20,16 @@ public class PlayerController : MonoBehaviour
 
     private float m_CheckRadius = 1f;
 
-    private RigidBody2D body;
+    private Rigidbody2D m_body;
+
+    [SerializeField]
+    private bool m_IsGrounded;
 
     [SerializeField]
     private Vector3 m_Velocity;
 
     [SerializeField]
-    private bool isGrounded;
+    private bool m_AirControl = true;
 
     [Header("Events")]
 	[Space]
@@ -42,7 +42,7 @@ public class PlayerController : MonoBehaviour
     //Called only at Start
     private void Awake(){
 
-        body = GetComponent<RigidBody2D>();
+        m_body = GetComponent<Rigidbody2D>();
 
         if (OnLandEvent == null)
         {
@@ -50,19 +50,50 @@ public class PlayerController : MonoBehaviour
         }
     }
 
-    //Called when available
-    //Deals with player inputs
-    private void Update()
-    {
-        
-    }
 
     //Called at Fixed Intervals
     //Deals with Updating Velocity, Position, etc
     private void FixedUpdate(){
+        bool wasGrounded = m_IsGrounded;
+        m_IsGrounded = false;
+
+        Collider2D[] colliders = Physics2D.OverlapCircleAll(m_FloorCheck.position, m_CheckRadius, m_CollisionLayer);
+
+        for (int i = 0; i < colliders.Length; i++)
+        {
+            if(colliders[i].gameObject != gameObject)
+            {
+                 m_IsGrounded=true;
+
+                if(!wasGrounded)
+                    OnLandEvent.Invoke();
+            }
+        }
+    }
+
+    public void MoveCharacter(float move, bool jump)
+    {
+
+       if(m_IsGrounded || m_AirControl)
+        {
+            Vector3 target = new Vector2(move * 10f, m_body.velocity.y);
+
+            m_body.velocity = Vector3.SmoothDamp(m_body.velocity, target, ref m_Velocity, m_MoveSmooth);
+        }
+        
+       if(m_IsGrounded && jump)
+        {
+            m_IsGrounded = false;
+            m_body.AddForce(new Vector2(0f, m_JumpForce));
+        }
+
+        //Add logic to flip sprites here
 
     }
 
-    
+    public bool isGrounded()
+    {
+        return m_IsGrounded;
+    }
 
 }
