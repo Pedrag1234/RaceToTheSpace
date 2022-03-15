@@ -14,7 +14,18 @@ public class TurretAI : MonoBehaviour
     private GameObject m_TurretCannon;
 
     [SerializeField]
-    private float m_TurretRadius = 45f;
+    private Transform m_TurretCannonEnd;
+
+    [SerializeField]
+    private float m_ShotForce;
+
+    [SerializeField]
+    private GameObject m_Projectile;
+
+    [SerializeField]
+    private float m_FireRate;
+
+    float TimeToFire = 0;
 
 
     private Vector2 m_TargetDirection;
@@ -34,21 +45,17 @@ public class TurretAI : MonoBehaviour
         {
             if(ray.collider.gameObject.tag == "Player")
             {
-                Debug.Log("Can Raycast");
                 if (!playerDetected)
                 {
                     playerDetected = true;
-                    Debug.Log("Player Detected");
                 }
                    
             }
         }
         else
         {
-            Debug.Log("Cannot Raycast");
             if (playerDetected)
             {
-                Debug.Log("Player Out of range");
                 playerDetected = false;
 
             }
@@ -57,14 +64,23 @@ public class TurretAI : MonoBehaviour
         if (playerDetected)
         {
             m_TurretCannon.transform.up = m_TargetDirection;
+
+            if(Time.time > TimeToFire)
+            {
+                TimeToFire = Time.time + 1 / m_FireRate;
+                ShootProjectile();
+            }
         }
+    }
+
+    private void ShootProjectile()
+    {
+        GameObject bullet = Instantiate(m_Projectile,m_TurretCannonEnd.position,Quaternion.identity);
+        bullet.GetComponent<Rigidbody2D>().AddForce(m_TargetDirection * m_ShotForce);
     }
 
     void OnDrawGizmos()
     {
-
-        // Create the ray you want to check
-        float rayLength = 3f;
 
         // Then draw it
         Gizmos.DrawRay(transform.position, m_TargetDirection);
