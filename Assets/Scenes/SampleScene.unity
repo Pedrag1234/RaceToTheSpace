@@ -123,6 +123,22 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
+--- !u!1 &113047796
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 3554534926098085789, guid: 0b7fb00a366bcaa46b005cf326130adf, type: 3}
+  m_PrefabInstance: {fileID: 3554534925568727450}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 670428680}
+  m_Layer: 0
+  m_Name: 'Turret (Missing Prefab with guid: 0b7fb00a366bcaa46b005cf326130adf)'
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
 --- !u!1 &138209023
 GameObject:
   m_ObjectHideFlags: 0
@@ -225,6 +241,7 @@ GameObject:
   - component: {fileID: 519420032}
   - component: {fileID: 519420031}
   - component: {fileID: 519420029}
+  - component: {fileID: 519420030}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -240,6 +257,19 @@ AudioListener:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 519420028}
   m_Enabled: 1
+--- !u!114 &519420030
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 519420028}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9dc2b2471378c064d97c6dafecf6a9f7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  player: {fileID: 686007451}
 --- !u!20 &519420031
 Camera:
   m_ObjectHideFlags: 0
@@ -297,11 +327,21 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!4 &670428680 stripped
+--- !u!4 &670428680
 Transform:
+  m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 3554534926098085778, guid: 0b7fb00a366bcaa46b005cf326130adf, type: 3}
   m_PrefabInstance: {fileID: 3554534925568727450}
   m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 113047796}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 844042329}
+  m_Father: {fileID: 2067641481}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &686007451
 GameObject:
   m_ObjectHideFlags: 0
@@ -476,11 +516,21 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_MovementSpeed: 200
   controller: {fileID: 686007453}
---- !u!4 &844042329 stripped
+--- !u!4 &844042329
 Transform:
+  m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 3554534925874055619, guid: 0b7fb00a366bcaa46b005cf326130adf, type: 3}
   m_PrefabInstance: {fileID: 3554534925568727450}
   m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1205143026}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 1034299949}
+  m_Father: {fileID: 670428680}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1034299948
 GameObject:
   m_ObjectHideFlags: 0
@@ -541,6 +591,22 @@ Transform:
   m_Father: {fileID: 1377931844}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1205143026
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 9223372036854775807, guid: 0b7fb00a366bcaa46b005cf326130adf, type: 3}
+  m_PrefabInstance: {fileID: 3554534925568727450}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 844042329}
+  m_Layer: 0
+  m_Name: Placeholder for referenced Transform in Prefab instance (1)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
 --- !u!1 &1377931843
 GameObject:
   m_ObjectHideFlags: 0
