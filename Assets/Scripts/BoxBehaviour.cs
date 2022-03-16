@@ -46,12 +46,9 @@ public class BoxBehaviour : MonoBehaviour
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
-        if (collision.gameObject.tag == "Player"/*  && Input.GetKeyDown(KeyCode.E) */)
+        if (collision.gameObject.tag == "Player")
         {
-            //transform.position=collision.gameObject.transform.position + new Vector3(0.6f,1,0);
-            //grabed=true;
             colliding=true;
-            //notrealesed = true;
         }
     }
 }
