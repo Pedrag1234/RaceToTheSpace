@@ -8,6 +8,8 @@ public class BoxBehaviour : MonoBehaviour
     private GameObject player;
 
     private bool grabed=false;
+    private bool notrealesed=false;
+    private bool colliding=false;
 
     // Start is called before the first frame update
     void Start()
@@ -18,17 +20,38 @@ public class BoxBehaviour : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if(grabed){
-            transform.position=player.transform.position + new Vector3(0.6f,1,0);
+        if(colliding){
+           
+            if(grabed){
+                transform.position=player.transform.position + new Vector3(0.6f,1,0);
+            }
+
+            if(Input.GetKeyDown(KeyCode.E) && !grabed && !notrealesed){
+                
+                grabed=true;
+                notrealesed=true;
+            }
+
+            if(Input.GetKeyDown(KeyCode.E) && grabed && !notrealesed){
+                
+                grabed=false;
+                notrealesed=true;
+            }
+
+            if(Input.GetKeyUp(KeyCode.E)){
+                notrealesed=false;
+            }
         }
     }
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
-        if (collision.gameObject.tag == "Player")
+        if (collision.gameObject.tag == "Player"/*  && Input.GetKeyDown(KeyCode.E) */)
         {
-            transform.position=collision.gameObject.transform.position + new Vector3(0.6f,1,0);
-            grabed=true;
+            //transform.position=collision.gameObject.transform.position + new Vector3(0.6f,1,0);
+            //grabed=true;
+            colliding=true;
+            //notrealesed = true;
         }
     }
 }
