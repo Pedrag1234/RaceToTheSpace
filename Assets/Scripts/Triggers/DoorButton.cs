@@ -7,13 +7,14 @@ public class DoorButton : MonoBehaviour
     [SerializeField] private DoorSetActive door;
 
     private void OnTriggerEnter2D(Collider2D collider){
-        if(collider.tag == "Player"){
+        if(collider.tag == "Player" || collider.tag == "Box"){
             door.OpenDoor();
         }
     }
 
     private void OnTriggerExit2D(Collider2D collider){
-        if(collider.tag == "Player"){
+        if(collider.tag == "Player" || collider.tag == "Box")
+        {
             door.CloseDoor();
         }
     }
