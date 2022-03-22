@@ -62,12 +62,38 @@ public class PortalBehaviour : MonoBehaviour
         }
     }
 
+    public void resetTPTime()
+    {
+        this.timeBetweenTP = 1;
+    }
+
+
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if(Vector2.Distance(transform.position, collision.transform.position) > distance && collision.tag == "Player" && timeBetweenTP <= 0)
+        if(Vector2.Distance(transform.position, collision.transform.position) > distance && collision.tag == "Player" && timeBetweenTP <= 0 && m_Destination != null)
         {
             collision.transform.position = new Vector2(m_Destination.position.x, m_Destination.position.y);
-            timeBetweenTP = 1;
+            resetTPTime();
+
+            if (color == true)
+            {
+                if (GameObject.FindGameObjectWithTag("Blue Portal") != null)
+                {
+                    GameObject tmp_destination = GameObject.FindGameObjectWithTag("Blue Portal");
+                    tmp_destination.GetComponent<PortalBehaviour>().resetTPTime();
+                }
+
+            }
+            else
+            {
+                if (GameObject.FindGameObjectWithTag("Orange Portal") != null)
+                {
+                    GameObject tmp_destination = GameObject.FindGameObjectWithTag("Orange Portal");
+                    tmp_destination.GetComponent<PortalBehaviour>().resetTPTime();
+                }
+
+            }
+
         }
     }
 }
