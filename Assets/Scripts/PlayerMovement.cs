@@ -15,7 +15,6 @@ public class PlayerMovement : MonoBehaviour
 
 
     bool m_Jump = false;
-    int m_NJumps = 2;
 
 
     float currentMove = 0f;
@@ -45,13 +44,11 @@ public class PlayerMovement : MonoBehaviour
 
         if (Input.GetButtonDown("Jump"))
         {
-            if (m_NJumps > 0)
-            {
-                animator.SetBool("StartJump", true);
-                animator.SetBool("JumpEnded", false); 
-                m_Jump = true;
-                m_NJumps--;
-            }
+
+           animator.SetBool("StartJump", true);
+           animator.SetBool("JumpEnded", false); 
+           m_Jump = true;
+
         }
 
         animator.SetFloat("FallSpeed", controller.getFallSpeed());
@@ -64,11 +61,6 @@ public class PlayerMovement : MonoBehaviour
 
     private void FixedUpdate()
     {
-        if (controller.isGrounded())
-        {
-            m_NJumps = 2;
-        }
-
         controller.MoveCharacter(currentMove * Time.deltaTime, m_Jump);
 
         m_Jump = false ;

@@ -83,7 +83,7 @@ public class PlayerController : MonoBehaviour
             m_body.velocity = Vector3.SmoothDamp(m_body.velocity, target, ref m_Velocity, m_MoveSmooth);
         }
         
-       if(jump)
+       if(jump && m_IsGrounded)
         {
             m_IsGrounded = false;
             m_body.AddForce(new Vector2(0f, m_JumpForce));
