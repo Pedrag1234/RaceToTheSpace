@@ -36,7 +36,7 @@ public class PlayerCamera : MonoBehaviour
 
         if (!m_IsTeleporting)
         {
-            transform.position = player.transform.position + new Vector3(0, 2.5f, -10);
+            transform.position = player.transform.position + new Vector3(0, 2.5f, -12);
 
             UpdateTimerUI();
         }
@@ -48,13 +48,13 @@ public class PlayerCamera : MonoBehaviour
             {
                 m_IsTeleporting = false ;
 
-                transform.position = player.transform.position + new Vector3(0, 2.5f, -10);
+                transform.position = player.transform.position + new Vector3(0, 2.5f, -12);
 
                 UpdateTimerUI();
             }
             else
             {
-                Vector3 res = Vector3.Lerp(transform.position, player.transform.position + new Vector3(0, 2.5f, -10), speed);
+                Vector3 res = Vector3.Lerp(transform.position, player.transform.position + new Vector3(0, 2.5f, -12), speed);
                 Debug.Log(res);
                 transform.position = res; 
 
@@ -79,7 +79,6 @@ public class PlayerCamera : MonoBehaviour
 
     public void teleportCamera(Vector3 destination)
     {
-        Debug.Log("yEET");
         m_Destination = destination;
         m_IsTeleporting=true;
     }
