@@ -33,7 +33,13 @@ public class PortalGunBehaviour : MonoBehaviour
                 Destroy(bluePortal);
             }
 
-            Instantiate(m_BluePortal, mouseWorldPosition, Quaternion.identity);
+            GameObject portal = Instantiate(m_BluePortal, mouseWorldPosition, Quaternion.identity);
+
+            if (!isPlaceable(portal))
+            {
+                Destroy(bluePortal);
+            }
+               
         }
 
         if (Input.GetMouseButtonDown(1))
@@ -45,7 +51,32 @@ public class PortalGunBehaviour : MonoBehaviour
                 Destroy(orangePortal);
             }
 
-            Instantiate(m_OrangePortal, mouseWorldPosition, Quaternion.identity);
+            GameObject portal = Instantiate(m_OrangePortal, mouseWorldPosition, Quaternion.identity);
+
+            if (!isPlaceable(portal))
+            {
+                Destroy(orangePortal);
+            }
+                
         }
+    }
+
+    private bool isPlaceable(GameObject obj)
+    {
+
+        Collider2D testCollider = obj.GetComponent<Collider2D>();
+
+        Collider2D[] colliders = Physics2D.OverlapBoxAll((Vector2)testCollider.bounds.center, (Vector2)testCollider.bounds.size, 0f);
+
+
+        Debug.Log(colliders.Length);
+
+        if (colliders.Length > 1)
+        {
+            Destroy(obj);
+            return false;
+        }  
+        else
+            return true;
     }
 }

@@ -123,6 +123,75 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
+--- !u!1001 &15926409
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 2969337099927575360, guid: 3f562c6f2d5f1c74d94c07b794f2d280, type: 3}
+      propertyPath: m_Name
+      value: Blue Portal
+      objectReference: {fileID: 0}
+    - target: {fileID: 2969337099927575373, guid: 3f562c6f2d5f1c74d94c07b794f2d280, type: 3}
+      propertyPath: m_RootOrder
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 2969337099927575373, guid: 3f562c6f2d5f1c74d94c07b794f2d280, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 7.8106
+      objectReference: {fileID: 0}
+    - target: {fileID: 2969337099927575373, guid: 3f562c6f2d5f1c74d94c07b794f2d280, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -2.64
+      objectReference: {fileID: 0}
+    - target: {fileID: 2969337099927575373, guid: 3f562c6f2d5f1c74d94c07b794f2d280, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2969337099927575373, guid: 3f562c6f2d5f1c74d94c07b794f2d280, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2969337099927575373, guid: 3f562c6f2d5f1c74d94c07b794f2d280, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2969337099927575373, guid: 3f562c6f2d5f1c74d94c07b794f2d280, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2969337099927575373, guid: 3f562c6f2d5f1c74d94c07b794f2d280, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2969337099927575373, guid: 3f562c6f2d5f1c74d94c07b794f2d280, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2969337099927575373, guid: 3f562c6f2d5f1c74d94c07b794f2d280, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2969337099927575373, guid: 3f562c6f2d5f1c74d94c07b794f2d280, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2969337099927575375, guid: 3f562c6f2d5f1c74d94c07b794f2d280, type: 3}
+      propertyPath: m_Size.x
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2969337099927575375, guid: 3f562c6f2d5f1c74d94c07b794f2d280, type: 3}
+      propertyPath: m_Size.y
+      value: 2.1391263
+      objectReference: {fileID: 0}
+    - target: {fileID: 2969337099927575375, guid: 3f562c6f2d5f1c74d94c07b794f2d280, type: 3}
+      propertyPath: m_Offset.y
+      value: -0.022981644
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 3f562c6f2d5f1c74d94c07b794f2d280, type: 3}
 --- !u!224 &114538222 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 2286837144755289602, guid: fdeca44f91bdc414799c2a6392641b75, type: 3}
@@ -139,7 +208,7 @@ GameObject:
   - component: {fileID: 138209024}
   m_Layer: 0
   m_Name: Environment
-  m_TagString: Untagged
+  m_TagString: World
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -196,6 +265,10 @@ PrefabInstance:
     - target: {fileID: 7257138076659758854, guid: 8587d33639626454697a6dc42c7615b5, type: 3}
       propertyPath: m_Name
       value: Turret
+      objectReference: {fileID: 0}
+    - target: {fileID: 7257138076659758854, guid: 8587d33639626454697a6dc42c7615b5, type: 3}
+      propertyPath: m_TagString
+      value: World
       objectReference: {fileID: 0}
     - target: {fileID: 7257138076659758856, guid: 8587d33639626454697a6dc42c7615b5, type: 3}
       propertyPath: m_Target
@@ -294,7 +367,7 @@ GameObject:
   - component: {fileID: 297893511}
   m_Layer: 0
   m_Name: Detection Camera
-  m_TagString: Untagged
+  m_TagString: World
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -968,7 +1041,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cam: {fileID: 0}
   m_BluePortal: {fileID: 2969337099927575360, guid: 3f562c6f2d5f1c74d94c07b794f2d280, type: 3}
-  m_OrangePortal: {fileID: 7763187521824920450, guid: c2a66b4882244dc44bab69f1aecc50f8, type: 3}
+  m_OrangePortal: {fileID: 6869507946988913750, guid: c2a66b4882244dc44bab69f1aecc50f8, type: 3}
 --- !u!95 &686007460
 Animator:
   serializedVersion: 3
@@ -1124,7 +1197,7 @@ GameObject:
   - component: {fileID: 1377931844}
   m_Layer: 0
   m_Name: World
-  m_TagString: Untagged
+  m_TagString: World
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1204,6 +1277,10 @@ PrefabInstance:
     - target: {fileID: 1329135258329799891, guid: 0906699da4f0bd746b314794195d0d74, type: 3}
       propertyPath: m_Name
       value: Door
+      objectReference: {fileID: 0}
+    - target: {fileID: 1329135258329799891, guid: 0906699da4f0bd746b314794195d0d74, type: 3}
+      propertyPath: m_TagString
+      value: World
       objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 2757350529369048408, guid: 0906699da4f0bd746b314794195d0d74, type: 3}
@@ -1342,6 +1419,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Door (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 1329135258329799891, guid: 0906699da4f0bd746b314794195d0d74, type: 3}
+      propertyPath: m_TagString
+      value: World
+      objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 2757350529369048408, guid: 0906699da4f0bd746b314794195d0d74, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 0906699da4f0bd746b314794195d0d74, type: 3}
@@ -1358,7 +1439,7 @@ GameObject:
   - component: {fileID: 1913175401}
   m_Layer: 0
   m_Name: Floor
-  m_TagString: Untagged
+  m_TagString: test
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1693,7 +1774,7 @@ GameObject:
   - component: {fileID: 2067641481}
   m_Layer: 0
   m_Name: Traps
-  m_TagString: Untagged
+  m_TagString: World
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1769,9 +1850,17 @@ PrefabInstance:
       propertyPath: door
       value: 
       objectReference: {fileID: 756041906}
+    - target: {fileID: 6136420468910967171, guid: a40ecfd43ff0ae14c91582333c1db14c, type: 3}
+      propertyPath: m_Material
+      value: 
+      objectReference: {fileID: 6200000, guid: a4ea37828003bb7429efe9b2db848a8a, type: 2}
     - target: {fileID: 6733495610296353752, guid: a40ecfd43ff0ae14c91582333c1db14c, type: 3}
       propertyPath: m_Name
       value: Floor Button
+      objectReference: {fileID: 0}
+    - target: {fileID: 6733495610296353752, guid: a40ecfd43ff0ae14c91582333c1db14c, type: 3}
+      propertyPath: m_TagString
+      value: World
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a40ecfd43ff0ae14c91582333c1db14c, type: 3}
@@ -1837,6 +1926,10 @@ PrefabInstance:
     - target: {fileID: 5542586623597020059, guid: 83839581db3d6b047980c6641f0df7d5, type: 3}
       propertyPath: m_Name
       value: Turret
+      objectReference: {fileID: 0}
+    - target: {fileID: 5542586623597020059, guid: 83839581db3d6b047980c6641f0df7d5, type: 3}
+      propertyPath: m_TagString
+      value: World
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 83839581db3d6b047980c6641f0df7d5, type: 3}
