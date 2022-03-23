@@ -31,6 +31,8 @@ public class PlayerController : MonoBehaviour
     [SerializeField]
     private bool m_AirControl = true;
 
+    private bool m_facingRight = true;
+
     [Header("Events")]
 	[Space]
 
@@ -88,12 +90,35 @@ public class PlayerController : MonoBehaviour
         }
 
         //Add logic to flip sprites here
+        if(move > 0 && !m_facingRight)
+        {
+            FlipSprite();
+        }
 
+        if(move < 0 && m_facingRight)
+        {
+            FlipSprite();
+        }
     }
 
     public bool isGrounded()
     {
         return m_IsGrounded;
+    }
+
+    public float getFallSpeed()
+    {
+        return m_body.velocity.y;
+    }
+
+
+    private void FlipSprite()
+    {
+        m_facingRight = !m_facingRight;
+
+        Vector3 scale = transform.localScale;
+        scale.x *= -1;
+        transform.localScale = scale;
     }
 
 }
