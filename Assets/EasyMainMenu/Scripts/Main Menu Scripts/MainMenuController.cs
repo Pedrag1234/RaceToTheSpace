@@ -132,6 +132,14 @@ public class MainMenuController : MonoBehaviour {
         SceneManager.LoadScene(0);
         
     }
+
+    public void openScoreboard()
+    {
+        SceneManager.LoadScene(2);
+        
+    }
+
+
     #endregion
 
     #region Back Buttons
