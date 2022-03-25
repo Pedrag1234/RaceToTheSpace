@@ -7,6 +7,8 @@ TagManager:
   - Box
   - Orange Portal
   - Blue Portal
+  - World
+  - test
   layers:
   - Default
   - TransparentFX

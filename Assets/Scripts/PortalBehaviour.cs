@@ -9,15 +9,21 @@ public class PortalBehaviour : MonoBehaviour
     [SerializeField]
     private Transform m_Destination;
 
+    
+
+    public PlayerCamera camera;
+
     public bool color = false;
     public float distance = 0.2f;
 
 
     public float timeBetweenTP = 1;
 
-
-    void Start()
+    private void Awake()
     {
+        camera = Camera.main.GetComponent<PlayerCamera>();
+
+
         timeBetweenTP = 0;
         if (color == true)
         {
@@ -26,7 +32,8 @@ public class PortalBehaviour : MonoBehaviour
                 m_Destination = GameObject.FindGameObjectWithTag("Blue Portal").transform;
             }
         }
-        else {
+        else
+        {
             if (GameObject.FindGameObjectWithTag("Orange Portal") != null)
             {
                 m_Destination = GameObject.FindGameObjectWithTag("Orange Portal").transform;
@@ -73,6 +80,9 @@ public class PortalBehaviour : MonoBehaviour
         if(Vector2.Distance(transform.position, collision.transform.position) > distance && collision.tag == "Player" && timeBetweenTP <= 0 && m_Destination != null)
         {
             collision.transform.position = new Vector2(m_Destination.position.x, m_Destination.position.y);
+
+            camera.teleportCamera(m_Destination.position);
+
             resetTPTime();
 
             if (color == true)

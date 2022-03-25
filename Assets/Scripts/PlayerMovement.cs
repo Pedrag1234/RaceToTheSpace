@@ -10,9 +10,11 @@ public class PlayerMovement : MonoBehaviour
     [SerializeField]
     private PlayerController controller;
 
+    [SerializeField]
+    private Animator animator;
+
 
     bool m_Jump = false;
-    int m_NJumps = 2;
 
 
     float currentMove = 0f;
@@ -23,25 +25,42 @@ public class PlayerMovement : MonoBehaviour
     {
         currentMove = Input.GetAxisRaw("Horizontal") * m_MovementSpeed;
 
-        if (Input.GetButtonDown("Jump"))
+        if(Mathf.Abs(currentMove) > 1f)
         {
-          
-            if (m_NJumps > 0)
+            if (animator.GetBool("StartRun"))
             {
-                m_Jump = true;
-                m_NJumps--;
+                animator.SetBool("isRunning", true);
+            }
+            else
+            {
+                animator.SetBool("StartRun",true);
             }
         }
+        else
+        {
+            animator.SetBool("StartRun", false);
+            animator.SetBool("isRunning", false);
+        }
 
+        if (Input.GetButtonDown("Jump"))
+        {
+
+           animator.SetBool("StartJump", true);
+           animator.SetBool("JumpEnded", false); 
+           m_Jump = true;
+
+        }
+
+        animator.SetFloat("FallSpeed", controller.getFallSpeed());
+    }
+
+    public void OnLanding()
+    {
+        animator.SetBool("JumpEnded",true );
     }
 
     private void FixedUpdate()
     {
-        if (controller.isGrounded())
-        {
-            m_NJumps = 2;
-        }
-
         controller.MoveCharacter(currentMove * Time.deltaTime, m_Jump);
 
         m_Jump = false ;
