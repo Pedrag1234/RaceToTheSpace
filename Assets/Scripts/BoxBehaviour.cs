@@ -11,11 +11,7 @@ public class BoxBehaviour : MonoBehaviour
     private bool notrealesed=false;
     private bool colliding=false;
 
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
+
 
     // Update is called once per frame
     void Update()
@@ -23,7 +19,13 @@ public class BoxBehaviour : MonoBehaviour
         if(colliding){
            
             if(grabed){
-                transform.position=player.transform.position + new Vector3(0.6f,1,0);
+                if (player.GetComponent<PlayerController>().getIsFacingRight()) {
+                    transform.position = player.transform.position + new Vector3(0.8f, 1, 0);
+                }
+                else
+                {
+                    transform.position = player.transform.position + new Vector3(-0.8f, 1, 0);
+                }
             }
 
             if(Input.GetKeyDown(KeyCode.E) && !grabed && !notrealesed){

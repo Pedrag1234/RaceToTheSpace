@@ -121,4 +121,9 @@ public class PlayerController : MonoBehaviour
         transform.localScale = scale;
     }
 
+    public bool getIsFacingRight()
+    {
+        return m_facingRight;
+    }
+
 }
