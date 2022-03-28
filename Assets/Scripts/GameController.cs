@@ -43,7 +43,10 @@ public class GameController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+        if(Input.GetKeyDown(KeyCode.Escape)) {
+            //Save stuff
+            SceneManager.LoadScene(1);
+        }
 
         //press U to delete score
         if(Input.GetKeyDown(KeyCode.U)){ 
