@@ -535,6 +535,14 @@ PrefabInstance:
       propertyPath: door
       value: 
       objectReference: {fileID: 1326675849}
+    - target: {fileID: 6136420468910967171, guid: a40ecfd43ff0ae14c91582333c1db14c, type: 3}
+      propertyPath: m_Size.x
+      value: 1.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 6136420468910967171, guid: a40ecfd43ff0ae14c91582333c1db14c, type: 3}
+      propertyPath: m_Size.y
+      value: 1.5
+      objectReference: {fileID: 0}
     - target: {fileID: 6733495610296353752, guid: a40ecfd43ff0ae14c91582333c1db14c, type: 3}
       propertyPath: m_Name
       value: Floor Button
@@ -3100,6 +3108,14 @@ PrefabInstance:
       propertyPath: door
       value: 
       objectReference: {fileID: 994859657}
+    - target: {fileID: 6136420468910967171, guid: a40ecfd43ff0ae14c91582333c1db14c, type: 3}
+      propertyPath: m_Size.x
+      value: 1.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 6136420468910967171, guid: a40ecfd43ff0ae14c91582333c1db14c, type: 3}
+      propertyPath: m_Size.y
+      value: 1.5
+      objectReference: {fileID: 0}
     - target: {fileID: 6733495610296353752, guid: a40ecfd43ff0ae14c91582333c1db14c, type: 3}
       propertyPath: m_Name
       value: Floor Button (1)
