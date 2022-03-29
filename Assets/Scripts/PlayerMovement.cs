@@ -11,11 +11,13 @@ public class PlayerMovement : MonoBehaviour
     private PlayerController controller;
 
     [SerializeField]
+    public GameObject game_object;
+
+    [SerializeField]
     private Animator animator;
 
 
     bool m_Jump = false;
-
 
     float currentMove = 0f;
 
@@ -65,4 +67,15 @@ public class PlayerMovement : MonoBehaviour
 
         m_Jump = false ;
     }
+
+
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
+        if (collision.gameObject.tag == "Finish")
+        {
+            game_object.GetComponent<GameController>().FinishLine();
+
+        }
+    }
+
 }

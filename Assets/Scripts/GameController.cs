@@ -3,6 +3,8 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using System;
+using UnityEngine.SceneManagement;
+
 
 
 public class GameController : MonoBehaviour
@@ -20,10 +22,7 @@ public class GameController : MonoBehaviour
         
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-        if(Input.GetKeyDown(KeyCode.P)){ //todo: update condition to show score (gameover/gamefinished)
+    public void FinishLine(){
         var scores = score.text.Split(' ');
         int[] times = new int[3];
 
@@ -37,6 +36,16 @@ public class GameController : MonoBehaviour
             scoreManager.AddScore(scoreToAdd);
             scoreManager.SaveScore();
 
+        SceneManager.LoadScene(2);
+
+    }
+
+    // Update is called once per frame
+    void Update()
+    {
+        if(Input.GetKeyDown(KeyCode.Escape)) {
+            //Save stuff
+            SceneManager.LoadScene(1);
         }
 
         //press U to delete score
