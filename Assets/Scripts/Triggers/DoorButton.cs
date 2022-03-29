@@ -18,4 +18,10 @@ public class DoorButton : MonoBehaviour
             door.CloseDoor();
         }
     }
+
+    private void OnTriggerStay2D(Collider2D collider){
+        if(collider.tag == "Player" || collider.tag == "Box"){
+            door.OpenDoor();
+        }
+    }
 }
