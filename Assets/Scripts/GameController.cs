@@ -16,11 +16,6 @@ public class GameController : MonoBehaviour
     public string highscore;
     public ScoreManager scoreManager;
 
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
 
     public void FinishLine(){
         var scores = score.text.Split(' ');
@@ -54,4 +49,6 @@ public class GameController : MonoBehaviour
         }
         
     }
+
+    
 }
