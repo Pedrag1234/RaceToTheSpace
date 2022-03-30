@@ -23,6 +23,9 @@ public class TurretAI : MonoBehaviour
     private GameObject m_Projectile;
 
     [SerializeField]
+    private string m_tag;
+
+    [SerializeField]
     private float m_FireRate;
 
     float TimeToFire = 0;
@@ -32,6 +35,10 @@ public class TurretAI : MonoBehaviour
 
     public bool playerDetected = false;
 
+    private void Awake()
+    {
+        m_tag = m_Projectile.tag;
+    }
 
     // Update is called once per frame
     void Update()
@@ -76,7 +83,14 @@ public class TurretAI : MonoBehaviour
     private void ShootProjectile()
     {
         GameObject bullet = Instantiate(m_Projectile,m_TurretCannonEnd.position,Quaternion.identity);
-        bullet.GetComponent<Rigidbody2D>().AddForce(m_TargetDirection * m_ShotForce);
+        if(m_tag == "Missile")
+        {
+            bullet.GetComponent<MissileBehaviour>().setUp(m_TurretCannonEnd.up);
+        }
+        else
+        {
+            bullet.GetComponent<Rigidbody2D>().AddForce(m_TargetDirection * m_ShotForce);
+        }
     }
 
     void OnDrawGizmos()

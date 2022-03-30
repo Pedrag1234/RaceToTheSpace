@@ -9,7 +9,11 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 7257138076659758854, guid: 8587d33639626454697a6dc42c7615b5, type: 3}
       propertyPath: m_Name
-      value: Turret
+      value: Missile Turret
+      objectReference: {fileID: 0}
+    - target: {fileID: 7257138076659758856, guid: 8587d33639626454697a6dc42c7615b5, type: 3}
+      propertyPath: m_Range
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 7257138076659758856, guid: 8587d33639626454697a6dc42c7615b5, type: 3}
       propertyPath: m_Target
