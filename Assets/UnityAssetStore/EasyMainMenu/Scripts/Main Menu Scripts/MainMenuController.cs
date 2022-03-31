@@ -181,7 +181,7 @@ public class MainMenuController : MonoBehaviour {
     #region Sounds
     public void playHoverClip()
     {
-       
+       SoundManager.PlaySound();
     }
 
     void playClickSound() {
