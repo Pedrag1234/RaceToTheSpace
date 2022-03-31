@@ -140,6 +140,12 @@ public class MainMenuController : MonoBehaviour {
     }
 
 
+    public void openCredits()
+    {
+        SceneManager.LoadScene(3);
+    }
+
+
     #endregion
 
     #region Back Buttons
