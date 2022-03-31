@@ -36,25 +36,24 @@ public class PlayerCamera : MonoBehaviour
 
         if (!m_IsTeleporting)
         {
-            transform.position = player.transform.position + new Vector3(0, 2.5f, -12);
+            transform.position = player.transform.position + new Vector3(0, 3.0f, -12);
 
             UpdateTimerUI();
         }
         else
         {
-            Debug.Log(Vector3.Distance(transform.position, m_Destination));
 
             if(Vector3.Distance(transform.position,m_Destination) <= 11)
             {
                 m_IsTeleporting = false ;
 
-                transform.position = player.transform.position + new Vector3(0, 2.5f, -12);
+                transform.position = player.transform.position + new Vector3(0, 3.0f, -12);
 
                 UpdateTimerUI();
             }
             else
             {
-                Vector3 res = Vector3.Lerp(transform.position, player.transform.position + new Vector3(0, 2.5f, -12), speed);
+                Vector3 res = Vector3.Lerp(transform.position, player.transform.position + new Vector3(0, 3.0f, -12), speed);
                 Debug.Log(res);
                 transform.position = res; 
 

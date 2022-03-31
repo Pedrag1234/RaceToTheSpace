@@ -19,7 +19,7 @@ public class MissileBehaviour : MonoBehaviour
     private float m_RotationSpeed = 200f;
 
     // Start is called before the first frame update
-    void Start()
+    void Awake()
     {
         m_Target = GameObject.FindGameObjectWithTag("Player").transform;
         m_Rigidbody = GetComponent<Rigidbody2D>();
@@ -48,5 +48,10 @@ public class MissileBehaviour : MonoBehaviour
         {
             Destroy(gameObject);
         }
+    }
+
+    public void setUp(Vector3 up)
+    {
+         m_Rigidbody.transform.up = up;
     }
 }

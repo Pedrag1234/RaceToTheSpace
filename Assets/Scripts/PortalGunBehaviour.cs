@@ -72,8 +72,6 @@ public class PortalGunBehaviour : MonoBehaviour
 
         Collider2D testCollider = obj.GetComponent<Collider2D>();
 
-        Debug.Log((Vector2)testCollider.bounds.center);
-
         Collider2D[] colliders = Physics2D.OverlapBoxAll(testCollider.bounds.center, testCollider.bounds.size,90f);
 
 

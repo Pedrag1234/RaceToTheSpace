@@ -2,55 +2,54 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+
 public class BoxBehaviour : MonoBehaviour
 {
     [SerializeField]
-    private GameObject player;
+    private Transform m_GrabPoint;
 
-    private bool grabed=false;
-    private bool notrealesed=false;
-    private bool colliding=false;
+    [SerializeField]
+    private Transform m_rayPoint;
+
+    [SerializeField]
+    private float m_rayDistance;
+
+    private GameObject m_grabbedObject;
+    private int m_layerIndex;
 
 
+
+    private void Awake()
+    {
+        m_layerIndex = LayerMask.NameToLayer("Boxes");
+    }
 
     // Update is called once per frame
     void Update()
     {
-        if(colliding){
-           
-            if(grabed){
-                if (player.GetComponent<PlayerController>().getIsFacingRight()) {
-                    transform.position = player.transform.position + new Vector3(0.8f, 1, 0);
-                }
-                else
-                {
-                    transform.position = player.transform.position + new Vector3(-0.8f, 1, 0);
-                }
-            }
+      RaycastHit2D hit = Physics2D.Raycast(m_rayPoint.position,transform.right,m_rayDistance);
 
-            if(Input.GetKeyDown(KeyCode.E) && !grabed && !notrealesed){
-                
-                grabed=true;
-                notrealesed=true;
-            }
-
-            if(Input.GetKeyDown(KeyCode.E) && grabed && !notrealesed){
-                
-                grabed=false;
-                notrealesed=true;
-            }
-
-            if(Input.GetKeyUp(KeyCode.E)){
-                notrealesed=false;
-            }
-        }
-    }
-
-    private void OnCollisionEnter2D(Collision2D collision)
-    {
-        if (collision.gameObject.tag == "Player")
+        if(hit != null && hit.collider != null && hit.collider.gameObject.layer == m_layerIndex)
         {
-            colliding=true;
+            if(Input.GetKeyDown(KeyCode.E) && m_grabbedObject == null)
+            {
+                m_grabbedObject = hit.collider.gameObject;
+                m_grabbedObject.GetComponent<Rigidbody2D>().isKinematic = true;
+                m_grabbedObject.transform.position = m_GrabPoint.position;
+                m_grabbedObject.transform.SetParent(transform);
+            }
+            else if (Input.GetKeyDown(KeyCode.E) && m_grabbedObject != null)
+            {
+                m_grabbedObject.GetComponent<Rigidbody2D>().isKinematic = false;
+                m_grabbedObject.transform.SetParent(null);
+                m_grabbedObject = null;
+            }
         }
     }
+
+    private void FixedUpdate()
+    {
+        
+    }
+
 }
