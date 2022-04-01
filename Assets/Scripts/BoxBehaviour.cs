@@ -31,7 +31,7 @@ public class BoxBehaviour : MonoBehaviour
 
         if(hit != null && hit.collider != null && hit.collider.gameObject.layer == m_layerIndex)
         {
-            if(Input.GetKeyDown(KeyCode.E) && m_grabbedObject == null)
+           if(Input.GetKeyDown(KeyCode.E) && m_grabbedObject == null)
             {
                 m_grabbedObject = hit.collider.gameObject;
                 m_grabbedObject.GetComponent<Rigidbody2D>().isKinematic = true;
