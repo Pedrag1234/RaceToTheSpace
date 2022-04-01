@@ -83,6 +83,9 @@ public class TurretAI : MonoBehaviour
     private void ShootProjectile()
     {
         GameObject bullet = Instantiate(m_Projectile,m_TurretCannonEnd.position,Quaternion.identity);
+
+        GameSoundManager.PlaySound("shot");
+
         if(m_tag == "Missile")
         {
             bullet.GetComponent<MissileBehaviour>().setUp(m_TurretCannonEnd.up);
