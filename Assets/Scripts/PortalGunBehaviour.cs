@@ -10,6 +10,8 @@ public class PortalGunBehaviour : MonoBehaviour
     public GameObject m_BluePortal;
     public GameObject m_OrangePortal;
 
+    public Transform m_PlayeRaypoint;
+
     public GameObject crosshair;
 
 
@@ -28,43 +30,56 @@ public class PortalGunBehaviour : MonoBehaviour
 
         if (Input.GetMouseButtonDown(0))
         {
-            GameObject bluePortal = GameObject.FindGameObjectWithTag("Blue Portal");
-
-
-            if (bluePortal != null)
+            if (hasDirectLineOfSight(m_PlayeRaypoint.position, worldPoint))
             {
-                Destroy(bluePortal);
+                GameObject bluePortal = GameObject.FindGameObjectWithTag("Blue Portal");
+
+
+                if (bluePortal != null)
+                {
+                    Destroy(bluePortal);
+                }
+
+                GameObject portal = Instantiate(m_BluePortal, worldPoint, Quaternion.identity);
+
+                if (!isPlaceable(portal))
+                {
+                    Destroy(bluePortal);
+                }
             }
-
-            GameObject portal = Instantiate(m_BluePortal, worldPoint, Quaternion.identity);
-
-            if (!isPlaceable(portal))
+            else
             {
-                Destroy(bluePortal);
+                crosshair.GetComponent<CursorController>().setCrosshairColour(Color.red);
             }
+            
                
         }
 
         if (Input.GetMouseButtonDown(1))
         {
-            GameObject orangePortal = GameObject.FindGameObjectWithTag("Orange Portal");
 
-            string s = string.Format("Blue Portal pos = {0}", worldPoint);
-            Debug.Log(s);
-
-            if (orangePortal != null)
+            if(hasDirectLineOfSight(m_PlayeRaypoint.position, worldPoint))
             {
-                Destroy(orangePortal);
+                GameObject orangePortal = GameObject.FindGameObjectWithTag("Orange Portal");
+
+                if (orangePortal != null)
+                {
+                    Destroy(orangePortal);
+                }
+
+                GameObject portal = Instantiate(m_OrangePortal, worldPoint, Quaternion.identity);
+
+                if (!isPlaceable(portal))
+                {
+                    Destroy(orangePortal);
+                }
             }
-
-            GameObject portal = Instantiate(m_OrangePortal, worldPoint, Quaternion.identity);
-
-            if (!isPlaceable(portal))
+            else
             {
-                Destroy(orangePortal);
+                crosshair.GetComponent<CursorController>().setCrosshairColour(Color.red);
             }
-                
         }
+        
     }
 
     private bool isPlaceable(GameObject obj)
@@ -88,5 +103,27 @@ public class PortalGunBehaviour : MonoBehaviour
             return true;
         }
             
+    }
+
+    private bool hasDirectLineOfSight(Vector3 source, Vector3 dest)
+    {
+        Vector3 dir = dest - source;
+
+        float distance = Vector3.Distance(dest,source);
+
+        RaycastHit2D[] raycastHits = Physics2D.RaycastAll(source,dir,distance);
+
+        foreach(RaycastHit2D raycastHit2d in raycastHits)
+        {
+            if(raycastHit2d.collider.tag != "Player" 
+                && raycastHit2d.collider.tag != "Box"
+                && raycastHit2d.collider.tag != "Blue Portal"
+                && raycastHit2d.collider.tag != "Orange Portal")
+            {
+                return false;
+            }
+        }
+
+        return true;
     }
 }

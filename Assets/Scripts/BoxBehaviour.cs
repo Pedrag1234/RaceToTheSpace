@@ -46,10 +46,4 @@ public class BoxBehaviour : MonoBehaviour
             }
         }
     }
-
-    private void FixedUpdate()
-    {
-        
-    }
-
 }
