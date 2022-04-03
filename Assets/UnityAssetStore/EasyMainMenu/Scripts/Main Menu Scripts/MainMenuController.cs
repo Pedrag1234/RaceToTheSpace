@@ -129,7 +129,7 @@ public class MainMenuController : MonoBehaviour {
 
     public void newGame()
     {
-        SceneManager.LoadScene(0);
+        SceneManager.LoadScene(1);
         
     }
 

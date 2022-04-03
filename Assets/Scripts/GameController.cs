@@ -40,7 +40,7 @@ public class GameController : MonoBehaviour
     {
         if(Input.GetKeyDown(KeyCode.Escape)) {
             //Save stuff
-            SceneManager.LoadScene(1);
+            SceneManager.LoadScene(0);
         }
 
         //press U to delete score

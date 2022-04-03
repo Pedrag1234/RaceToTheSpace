@@ -16,7 +16,7 @@ public class ScoreboardController : MonoBehaviour
     void Update() {
         if(Input.GetKeyDown(KeyCode.Escape)) {
             //Save stuff
-            SceneManager.LoadScene(1);
+            SceneManager.LoadScene(0);
         }
     }
 
