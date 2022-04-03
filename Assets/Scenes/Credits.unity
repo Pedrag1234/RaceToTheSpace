@@ -585,7 +585,10 @@ MonoBehaviour:
     m_LineSpacing: 1
   m_Text: "CREDITS\r\n\r\n\r\n\rOUR TEAM\r\n\nMariana Soares\r\n\r\nNuno\r Santos\r\n\r\nPedro
     Azevedo\r\n\r\r\n\n\r\nASSETS\r\n\r\nFlag: https://ankousse26.itch.io/free-flag-with-animatio\r\n\r\nMenu:\r       
-    https://assetstore.unity.com/packages/tools/gui/easy-main-menu-free-106495"
+    https://assetstore.unity.com/packages/tools/gui/easy-main-menu-free-106495\n\nPortotype
+    Hero Demo:\nhttps://assetstore.unity.com/packages/2d/characters/prototype-hero-demo-pixel-art-186233\n\nPlatform
+    set:\nhttps://assetstore.unity.com/packages/2d/environments/platformer-set-150023
+    \n"
 --- !u!224 &1444850707914531373
 RectTransform:
   m_ObjectHideFlags: 0
@@ -602,8 +605,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0.000013368, y: -887}
-  m_SizeDelta: {x: 231.11, y: 465.344}
+  m_AnchoredPosition: {x: -0.000015259, y: -764}
+  m_SizeDelta: {x: 350.5833, y: 465.344}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &1444850707914531375
 CanvasRenderer:
