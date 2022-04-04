@@ -194,7 +194,7 @@ PrefabInstance:
     - target: {fileID: 6136420468910967168, guid: a40ecfd43ff0ae14c91582333c1db14c, type: 3}
       propertyPath: door
       value: 
-      objectReference: {fileID: 1730182618}
+      objectReference: {fileID: 1730182622}
     - target: {fileID: 6733495610296353752, guid: a40ecfd43ff0ae14c91582333c1db14c, type: 3}
       propertyPath: m_Name
       value: Floor Button (2)
@@ -5567,7 +5567,7 @@ PrefabInstance:
     - target: {fileID: 6136420468910967168, guid: a40ecfd43ff0ae14c91582333c1db14c, type: 3}
       propertyPath: door
       value: 
-      objectReference: {fileID: 1150889463}
+      objectReference: {fileID: 0}
     - target: {fileID: 6733495610296353752, guid: a40ecfd43ff0ae14c91582333c1db14c, type: 3}
       propertyPath: m_Name
       value: Floor Button (1)
@@ -5999,17 +5999,6 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 4949344953125250640, guid: 4f3cd1f4e31186d45b802d37c162ed5c, type: 3}
   m_PrefabInstance: {fileID: 1150889461}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &1150889463 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 4949344953125250642, guid: 4f3cd1f4e31186d45b802d37c162ed5c, type: 3}
-  m_PrefabInstance: {fileID: 1150889461}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: da8420ce3aa5fad4fbe32030d0532f51, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1001 &1177403502
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -6072,17 +6061,6 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 4949344953125250640, guid: 4f3cd1f4e31186d45b802d37c162ed5c, type: 3}
   m_PrefabInstance: {fileID: 1177403502}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &1177403504 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 4949344953125250642, guid: 4f3cd1f4e31186d45b802d37c162ed5c, type: 3}
-  m_PrefabInstance: {fileID: 1177403502}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: da8420ce3aa5fad4fbe32030d0532f51, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!4 &1177767454 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 8971540373039338362, guid: df290802e17d9184bbb577464a149e59, type: 3}
@@ -6155,7 +6133,7 @@ PrefabInstance:
     - target: {fileID: 6136420468910967168, guid: a40ecfd43ff0ae14c91582333c1db14c, type: 3}
       propertyPath: door
       value: 
-      objectReference: {fileID: 1243134850}
+      objectReference: {fileID: 0}
     - target: {fileID: 6733495610296353752, guid: a40ecfd43ff0ae14c91582333c1db14c, type: 3}
       propertyPath: m_Name
       value: Floor Button
@@ -6452,17 +6430,6 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 4949344953125250640, guid: 4f3cd1f4e31186d45b802d37c162ed5c, type: 3}
   m_PrefabInstance: {fileID: 1685417944}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &1243134850 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 4949344953125250642, guid: 4f3cd1f4e31186d45b802d37c162ed5c, type: 3}
-  m_PrefabInstance: {fileID: 1685417944}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: da8420ce3aa5fad4fbe32030d0532f51, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1001 &1313640178
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -7307,6 +7274,18 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4949344953125250640, guid: 4f3cd1f4e31186d45b802d37c162ed5c, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4949344953125250640, guid: 4f3cd1f4e31186d45b802d37c162ed5c, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 1.1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4949344953125250640, guid: 4f3cd1f4e31186d45b802d37c162ed5c, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4949344953125250640, guid: 4f3cd1f4e31186d45b802d37c162ed5c, type: 3}
       propertyPath: m_LocalPosition.x
       value: -23.47
       objectReference: {fileID: 0}
@@ -7346,26 +7325,60 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4949344953125250641, guid: 4f3cd1f4e31186d45b802d37c162ed5c, type: 3}
+      propertyPath: m_SpriteSortPoint
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 4949344953125250643, guid: 4f3cd1f4e31186d45b802d37c162ed5c, type: 3}
       propertyPath: m_Name
-      value: Door (5)
+      value: DoorAnimated
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    - target: {fileID: 4949344953125250643, guid: 4f3cd1f4e31186d45b802d37c162ed5c, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents:
+    - {fileID: 4949344953125250642, guid: 4f3cd1f4e31186d45b802d37c162ed5c, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 4f3cd1f4e31186d45b802d37c162ed5c, type: 3}
 --- !u!4 &1730182617 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4949344953125250640, guid: 4f3cd1f4e31186d45b802d37c162ed5c, type: 3}
   m_PrefabInstance: {fileID: 1730182616}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &1730182618 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 4949344953125250642, guid: 4f3cd1f4e31186d45b802d37c162ed5c, type: 3}
+--- !u!1 &1730182618 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4949344953125250643, guid: 4f3cd1f4e31186d45b802d37c162ed5c, type: 3}
   m_PrefabInstance: {fileID: 1730182616}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
+--- !u!95 &1730182619
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1730182618}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 75913a92941874048abf37602d29c3d0, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!114 &1730182622
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1730182618}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: da8420ce3aa5fad4fbe32030d0532f51, type: 3}
+  m_Script: {fileID: 11500000, guid: 7bf5b81abafd0bc419686506ce79f143, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!1001 &1730581581
@@ -7959,7 +7972,7 @@ PrefabInstance:
     - target: {fileID: 6136420468910967168, guid: a40ecfd43ff0ae14c91582333c1db14c, type: 3}
       propertyPath: door
       value: 
-      objectReference: {fileID: 1177403504}
+      objectReference: {fileID: 0}
     - target: {fileID: 6733495610296353752, guid: a40ecfd43ff0ae14c91582333c1db14c, type: 3}
       propertyPath: m_Name
       value: Floor Button (3)
@@ -8091,11 +8104,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8618020848006392413, guid: 70b5a5e350f871047a0dd761595ef268, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -143.9
+      value: -133.78
       objectReference: {fileID: 0}
     - target: {fileID: 8618020848006392413, guid: 70b5a5e350f871047a0dd761595ef268, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -69.1
+      value: -44.47
       objectReference: {fileID: 0}
     - target: {fileID: 8618020848006392413, guid: 70b5a5e350f871047a0dd761595ef268, type: 3}
       propertyPath: m_LocalPosition.z

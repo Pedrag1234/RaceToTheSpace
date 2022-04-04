@@ -12,7 +12,7 @@ public class CameraBehaviour : MonoBehaviour
     private Transform m_Target;
     
     [SerializeField]
-    private DoorSetActive door;
+    private DoorAnimator door;
 
     private Vector2 m_TargetDirection;
 

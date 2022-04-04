@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class DoorButton : MonoBehaviour
 {
-    [SerializeField] private DoorSetActive door;
+    [SerializeField] private DoorAnimator door;
 
     private void OnTriggerEnter2D(Collider2D collider){
         if(collider.tag == "Player" || collider.tag == "Box"){
