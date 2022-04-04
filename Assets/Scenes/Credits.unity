@@ -588,7 +588,7 @@ MonoBehaviour:
     https://assetstore.unity.com/packages/tools/gui/easy-main-menu-free-106495\n\nPortotype
     Hero Demo:\nhttps://assetstore.unity.com/packages/2d/characters/prototype-hero-demo-pixel-art-186233\n\nPlatform
     set:\nhttps://assetstore.unity.com/packages/2d/environments/platformer-set-150023
-    \n"
+    \n\nSpikes:\nhttps://opengameart.org/content/bevouliin-free-game-obstacle-spikes\n"
 --- !u!224 &1444850707914531373
 RectTransform:
   m_ObjectHideFlags: 0
