@@ -194,7 +194,7 @@ PrefabInstance:
     - target: {fileID: 6136420468910967168, guid: a40ecfd43ff0ae14c91582333c1db14c, type: 3}
       propertyPath: door
       value: 
-      objectReference: {fileID: 2105865746}
+      objectReference: {fileID: 1730182622}
     - target: {fileID: 6733495610296353752, guid: a40ecfd43ff0ae14c91582333c1db14c, type: 3}
       propertyPath: m_Name
       value: Floor Button (2)
@@ -5629,7 +5629,7 @@ PrefabInstance:
     - target: {fileID: 6136420468910967168, guid: a40ecfd43ff0ae14c91582333c1db14c, type: 3}
       propertyPath: door
       value: 
-      objectReference: {fileID: 1231641619}
+      objectReference: {fileID: 2105865746}
     - target: {fileID: 6733495610296353752, guid: a40ecfd43ff0ae14c91582333c1db14c, type: 3}
       propertyPath: m_Name
       value: Floor Button (1)
@@ -8099,7 +8099,7 @@ PrefabInstance:
     - target: {fileID: 6136420468910967168, guid: a40ecfd43ff0ae14c91582333c1db14c, type: 3}
       propertyPath: door
       value: 
-      objectReference: {fileID: 1730182622}
+      objectReference: {fileID: 1231641619}
     - target: {fileID: 6733495610296353752, guid: a40ecfd43ff0ae14c91582333c1db14c, type: 3}
       propertyPath: m_Name
       value: Floor Button (3)
@@ -8267,11 +8267,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8618020848006392413, guid: 70b5a5e350f871047a0dd761595ef268, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -98.57
+      value: -140.44
       objectReference: {fileID: 0}
     - target: {fileID: 8618020848006392413, guid: 70b5a5e350f871047a0dd761595ef268, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -35.68
+      value: -69.11
       objectReference: {fileID: 0}
     - target: {fileID: 8618020848006392413, guid: 70b5a5e350f871047a0dd761595ef268, type: 3}
       propertyPath: m_LocalPosition.z
