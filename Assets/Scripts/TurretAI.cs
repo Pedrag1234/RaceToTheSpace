@@ -47,7 +47,7 @@ public class TurretAI : MonoBehaviour
         m_TargetDirection = m_Target.position - transform.position;
 
         RaycastHit2D ray = Physics2D.Raycast(transform.position, m_TargetDirection, m_Range);
-
+       
         if (ray.collider != null)
         {
             if(ray.collider.gameObject.tag == "Player")
@@ -58,15 +58,16 @@ public class TurretAI : MonoBehaviour
                 }
                    
             }
-        }
-        else
-        {
-            if (playerDetected)
+            else
             {
-                playerDetected = false;
+                if (playerDetected)
+                {
+                    playerDetected = false;
 
+                }
             }
         }
+        
 
         if (playerDetected)
         {
