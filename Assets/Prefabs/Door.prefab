@@ -10,8 +10,9 @@ GameObject:
   m_Component:
   - component: {fileID: 4949344953125250640}
   - component: {fileID: 4949344953125250641}
-  - component: {fileID: 4949344953125250642}
+  - component: {fileID: 8090867620698870912}
   - component: {fileID: 4949344953125250647}
+  - component: {fileID: 36125524095272313}
   m_Layer: 0
   m_Name: Door
   m_TagString: Untagged
@@ -84,7 +85,7 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!114 &4949344953125250642
+--- !u!114 &8090867620698870912
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -93,7 +94,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 4949344953125250643}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: da8420ce3aa5fad4fbe32030d0532f51, type: 3}
+  m_Script: {fileID: 11500000, guid: 7bf5b81abafd0bc419686506ce79f143, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!61 &4949344953125250647
@@ -122,3 +123,22 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1, y: 4}
   m_EdgeRadius: 0
+--- !u!95 &36125524095272313
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4949344953125250643}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 99e3fd5e22e124b4a83b2a04c14ee900, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
