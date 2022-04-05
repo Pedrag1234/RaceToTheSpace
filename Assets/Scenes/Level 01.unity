@@ -111811,11 +111811,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7257138076659758857, guid: 8587d33639626454697a6dc42c7615b5, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 30.547852
+      value: 33.3
       objectReference: {fileID: 0}
     - target: {fileID: 7257138076659758857, guid: 8587d33639626454697a6dc42c7615b5, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 60.59691
+      value: 60.2
       objectReference: {fileID: 0}
     - target: {fileID: 7257138076659758857, guid: 8587d33639626454697a6dc42c7615b5, type: 3}
       propertyPath: m_LocalPosition.z
@@ -118549,7 +118549,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8618020848006392413, guid: 70b5a5e350f871047a0dd761595ef268, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -68.9
+      value: -69.3
       objectReference: {fileID: 0}
     - target: {fileID: 8618020848006392413, guid: 70b5a5e350f871047a0dd761595ef268, type: 3}
       propertyPath: m_LocalPosition.z
@@ -118587,10 +118587,22 @@ PrefabInstance:
       propertyPath: m_Name
       value: Player
       objectReference: {fileID: 0}
+    - target: {fileID: 8618020849146297084, guid: 70b5a5e350f871047a0dd761595ef268, type: 3}
+      propertyPath: m_MovementSpeed
+      value: 80
+      objectReference: {fileID: 0}
     - target: {fileID: 8618020849146297086, guid: 70b5a5e350f871047a0dd761595ef268, type: 3}
       propertyPath: crosshair
       value: 
       objectReference: {fileID: 1741860471}
+    - target: {fileID: 8618020849146297086, guid: 70b5a5e350f871047a0dd761595ef268, type: 3}
+      propertyPath: m_BluePortal
+      value: 
+      objectReference: {fileID: 331655726809345687, guid: 3f562c6f2d5f1c74d94c07b794f2d280, type: 3}
+    - target: {fileID: 8618020849146297086, guid: 70b5a5e350f871047a0dd761595ef268, type: 3}
+      propertyPath: m_OrangePortal
+      value: 
+      objectReference: {fileID: 2198504414690210629, guid: 2ae41e4284a2eb444b87c8e95f584997, type: 3}
     - target: {fileID: 8618020849146297087, guid: 70b5a5e350f871047a0dd761595ef268, type: 3}
       propertyPath: score
       value: 
