@@ -572,10 +572,10 @@ MonoBehaviour:
       m_Calls: []
   m_FontData:
     m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
-    m_FontSize: 14
+    m_FontSize: 12
     m_FontStyle: 0
     m_BestFit: 0
-    m_MinSize: 10
+    m_MinSize: 1
     m_MaxSize: 40
     m_Alignment: 4
     m_AlignByGeometry: 0
@@ -583,12 +583,13 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: "CREDITS\r\n\r\n\r\n\rOUR TEAM\r\n\nMariana Soares\r\n\r\nNuno\r Santos\r\n\r\nPedro
-    Azevedo\r\n\r\r\n\n\r\nASSETS\r\n\r\nFlag: https://ankousse26.itch.io/free-flag-with-animatio\r\n\r\nMenu:\r       
-    https://assetstore.unity.com/packages/tools/gui/easy-main-menu-free-106495\n\nPortotype
-    Hero Demo:\nhttps://assetstore.unity.com/packages/2d/characters/prototype-hero-demo-pixel-art-186233\n\nPlatform
+  m_Text: "CREDITS\r\n\r\n\n\r\nTEAM\r H1\n\nMariana Soares\r\nNuno\r Santos\r\nPedro
+    Azevedo\r\n\r\r\n\n\r\nASSETS\r\n\r\nFlag:\nhttps://ankousse26.itch.io/free-flag-with-animatio\r\n\r\n\nMenu:\r       
+    https://assetstore.unity.com/packages/tools/gui/easy-main-menu-free-106495\n\n\nPortotype
+    Hero Demo:\nhttps://assetstore.unity.com/packages/2d/characters/prototype-hero-demo-pixel-art-186233\n\n\nPlatform
     set:\nhttps://assetstore.unity.com/packages/2d/environments/platformer-set-150023
-    \n\nSpikes:\nhttps://opengameart.org/content/bevouliin-free-game-obstacle-spikes\n"
+    \n\n\nSpikes:\nhttps://opengameart.org/content/bevouliin-free-game-obstacle-spikes\n\nhttps://omniclause.itch.io/spikes\n\n\n2D
+    Pixel Art Portal Sprites: https://elthen.itch.io/2d-pixel-art-portal-sprites\n\n"
 --- !u!224 &1444850707914531373
 RectTransform:
   m_ObjectHideFlags: 0
@@ -605,8 +606,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -0.000015259, y: -764}
-  m_SizeDelta: {x: 350.5833, y: 465.344}
+  m_AnchoredPosition: {x: 0, y: -1180}
+  m_SizeDelta: {x: 380, y: 700}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &1444850707914531375
 CanvasRenderer:
