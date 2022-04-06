@@ -22,10 +22,14 @@ public class PlayerMovement : MonoBehaviour
     float currentMove = 0f;
 
 
+
+
     // Update is called once per frame
     private void Update()
     {
+
         currentMove = Input.GetAxisRaw("Horizontal") * m_MovementSpeed;
+
 
         if(Mathf.Abs(currentMove) > 1f)
         {

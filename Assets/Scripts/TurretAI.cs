@@ -28,6 +28,9 @@ public class TurretAI : MonoBehaviour
     [SerializeField]
     private float m_FireRate;
 
+    [SerializeField]
+    private SpriteRenderer m_Light;
+
     float TimeToFire = 0;
 
 
@@ -78,6 +81,11 @@ public class TurretAI : MonoBehaviour
                 TimeToFire = Time.time + 1 / m_FireRate;
                 ShootProjectile();
             }
+            m_Light.color = Color.red;
+        }
+        else
+        {
+            m_Light.color = Color.green;
         }
     }
 
